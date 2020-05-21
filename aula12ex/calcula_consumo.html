@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<h3>Álcool ou Gasolina?</h3>
+
+<script>
+
+function pulaLinha(){
+	document.write("<br>");
+}
+
+function escreva(frase){
+	document.write(frase);
+}
+	
+var tanque = 40;
+var caminhoGasolina = 480;
+var caminhoAlcool = 300;
+
+var consumoGasolina = caminhoGasolina / tanque;
+var consumoAlcool = caminhoAlcool / tanque;
+
+escreva( " O consumo utlizando Gasolina é " + consumoGasolina + " Km/l");
+pulaLinha();
+escreva( "O consumo utlizando Alcool é " + consumoAlcool+ " Km/l");
+
+
+
+</script>

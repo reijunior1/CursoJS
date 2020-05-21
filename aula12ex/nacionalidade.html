@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+   
+</head>
+
+    <h2> Sua Nacionalidade é ...</h2>
+    <p1>Digite qual país você nasceu</p1>
+
+<style>
+
+    body{
+        background: blue;
+        color: white;
+        font: bold, 18px, normal;
+        text-align: center;
+    }
+    div#res{
+        color: yellow;
+        font-size: 25px;
+    }
+
+
+</style>
+
+<body>
+
+    <input type="string" name  ="txtnac" id="txtnac">
+    <input type="button" value ='Descobrir Nacionalidade' onclick='nacion()'>
+    <div id='res'> Você é ? </div>
+            
+    <script>
+
+        function nacion(){
+
+            var nacio  = document.getElementById('txtnac')
+            var nacional = String(txtnac.value)
+
+            if (nacional == 'Brasil'){
+                res.innerHTML += ( 'Brasileiro')
+            } else {
+                 res.innerHTML += ('Estrangeiro')
+                    }
+  
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+       font: normal 20pt Arial;
+            }
+    </style>
+</head>
+<body>
+    <script>
+       var nome = prompt('Qual seu nome ? ');
+       var sal = parseFloat(prompt('Qual seu salário ? '))
+       var dollar = sal / 5.49
+       document.write(`${nome} seu salario é ${sal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`);
+       document.writeln(`E seu salário em <strong>Dollar</strong>! é ${dollar.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}.</br>`);
+    </script>
+</body>

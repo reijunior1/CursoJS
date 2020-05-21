@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+
+<script>
+	
+function pulaLinha() {
+	document.write("<br>")
+}
+
+function escreva(frase) {
+	document.write(frase)
+}
+
+function calculaImc (peso,altura){
+	return  peso / (altura*altura)	
+}
+
+var nome = prompt("Infome seu nome");
+var pesoInformado = prompt("informe seu peso");
+var alturaInformada = prompt("informe sua altura ");
+
+
+var imc = calculaImc(pesoInformado,alturaInformada);
+
+escreva( nome + "," + "Seu índice de Massa Corporal (IMC) = " + Math.round(imc ));
+pulaLinha();
+
+if (imc < 18.5){
+	escreva(" Seu IMC está abaixo do recomendado pela OMS")
+}
+
+if (imc >= 18.5 && imc <= 24.9){
+	escreva( " Seu IMC está normal conforme OMS")
+	}
+
+if (imc >= 25 && imc <= 29.9){
+	escreva( " Seu IMC é Sobrepeso conforme OMS")
+	}
+
+if (imc >= 30 && imc <= 34.9){
+	escreva( " Seu IMC é Obesidade grau 1 conforme OMS ")
+	}
+
+if (imc >= 35 && imc <=39.9 ){
+	escreva( " Seu IMC é Obesidade grau 2 conforme OMS ")
+	}
+
+if (imc >= 40 ){
+	escreva( " Seu IMC é Obesidade grau 3 conforme OMS ")
+	}
+
+</script>

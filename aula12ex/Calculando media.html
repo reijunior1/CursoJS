@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meida de Valores</title>
+</head>
+
+<h1> Calculando a média de notas dos alunos</h1>
+<p>  Média maior que de 7,5 <strong>APROVADO</strong> menor <strong>REPROVADO</strong></p>
+
+<style>
+    body {
+        background: rgb(68, 66, 66);
+        font: normal 18pt italic;
+        color: white;
+        text-align: center;
+        
+    }
+
+    div#res {
+        border-top: 20px;
+    }
+
+    div#res1 {
+        color: yellow
+    }
+    div#res3{
+        color: rgb(194, 78, 78);
+    }
+    div#res4{
+        color: red;
+    }
+
+    
+</style>
+
+<body>
+    <input type="number" name="txtnota1" id="txtnota1">
+    <br>
+    <input type="number" name="txtnota2" id="txtnota2">
+    <br>
+    <input type="number" name="txtnota3" id="txtnota3">  
+    <br>
+    <input type="button" value='Calcular Média' onclick='somar()'>
+    <br>
+    <div id='res'> informe suas notas e clique em <strong>Calcular Média</strong> </div>
+    <div id='res1'> Ano que vem tem mais</div>
+    <div id='res3'></div>
+    <div id='res4'></div>
+    <script>
+
+        function somar(){
+            var nota1 = document.getElementById('txtnota1')
+            var nota2 = document.getElementById('txtnota2')
+            var nota3 = document.getElementById('txtnota3')
+            var n1 = Number(txtnota1.value)
+            var n2 = Number(txtnota2.value)
+            var n3 = Number(txtnota3.value)
+            var media = (n1 + n2 + n3) / 3
+              
+            res.innerHTML =  ` Sua Média foi ${Math.round(media)} <br> `;
+            
+            if (media >= 7.5) {
+                res.innerHTML  += (' Aluno APROVADO <br>')
+                res.innerHTML  += ('Você foi muito bem, continue assim')
+                res3.innerHTML  += ('Você passará para outro para um nível maior, continue assim')
+            }else{
+                res.innerHTML += ('Aluno REPROVADO <br>')
+                res.innerHTML += ( 'Estude mais')
+                res4.innerHTML += ('Você continuara, no mesma serie')  
+                }     
+            }
+                      
+    </script>
+</body>
+</html>
